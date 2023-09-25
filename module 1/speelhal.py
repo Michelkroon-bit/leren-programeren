@@ -15,4 +15,4 @@ print ('de prijs voor de vip vr gameseat is',uitkomst_vip2,'euro')
 
 totaal = uitkomst + uitkomst_vip2
 
-print('Dit geweldige dagje-uit met 4 mensen in de Speelhal met 45 minuten VR kost je maar',totaal,'euro')
+print(f'Dit geweldige dagje-uit met {aantal_personen} mensen in de Speelhal met 45 minuten VR kost je maar',totaal,'euro')
