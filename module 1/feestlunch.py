@@ -4,4 +4,4 @@ kortingsbonnen= 0.50* 3
 
 uitkomst = croissantjes + stokbroden - kortingsbonnen
 print(uitkomst)
-print(type(croissantjes))
+print(croissantjes)
