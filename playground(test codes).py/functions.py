@@ -92,3 +92,6 @@ while floatResult == 0
     try
     
     
+def get_float2(string):
+    uitkomst=float(string)
+    return(uitkomst)

@@ -12,4 +12,3 @@ bonnetje = (3.15 , 2.45 , 7.2)
 for bedrag in bonnetje:
     bedrag_in =bereken_hoog_btw_inc(bedrag)
     print(f"excl.: €-{bedrag} incl: -{bedrag_in})
-    

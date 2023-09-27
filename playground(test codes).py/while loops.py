@@ -30,3 +30,7 @@ while leeftijd == 0:
     except ValueError:
         print('je moet wel een getal invullen ')
     print('je leeftijd is' ,leeftijd )
+    
+    
+    
+    
