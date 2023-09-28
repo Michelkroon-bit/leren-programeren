@@ -1,18 +1,26 @@
 aantal_personen = int(input('hoeveel personen zijn er'))
-prijs_per_persoon_in_centen = int(7.45)
-vip_vr_gameset_in_centen = int(37)
+vip_vr_gameset=int(input('hoeveel minuten vr wil je'))
 
-uitkomst = prijs_per_persoon * aantal_personen
-print ('de prijs per persoon is' ,uitkomst,'euro')
 
-uitkomst_vip = vip_vr_gameset / 5
 
-uitkomst_vip1 = uitkomst_vip * 45
+PRIJS_PER_PERSOON=745 #CENT
+VIP_VR_GAMESET=37#CENT
 
-uitkomst_vip2 = (uitkomst_vip1 *4)
-totaal = int(round(uitkomst_vip1 , 2))
-print ('de prijs voor de vip vr gameseat is',uitkomst_vip2,'euro')
 
+
+
+uitkomst = PRIJS_PER_PERSOON * aantal_personen
+print (f'de prijs per persoon is',uitkomst,'cent')
+
+
+vr_vip1 = VIP_VR_GAMESET * vip_vr_gameset
+vr_vip2 = vr_vip1 * 45
+
+
+uitkomst_vip2 = (vr_vip1 * aantal_personen)
+totaal = int(round(vr_vip1 , 2))
+print ('de prijs voor de vip vr gameseat is',uitkomst_vip2,'cent')
 totaal = uitkomst + uitkomst_vip2
 
-print(f'Dit geweldige dagje-uit met {aantal_personen} mensen in de Speelhal met 45 minuten VR kost je maar',totaal,'eurocent')
+
+print(f'Dit geweldige dagje-uit met {aantal_personen} mensen in de Speelhal met 45 minuten VR kost je maar',totaal,'cent')
