@@ -23,10 +23,7 @@ else:
 
 chips = input('is er chips aanwezig? ')
 if chips == 'ja':
-    chips = True
-else:
-    chips = False
-
+    
 if gastheer and gasten and drank and chips == False:
     print('Start the Party')
 elif chips and drank and gasten and gastheer == False:

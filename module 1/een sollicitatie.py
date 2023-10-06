@@ -20,6 +20,7 @@ print('+++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
 
 naam=input('wat is uw naam? ')
+geslacht=input(' bent u een man of vrouw? ')
 netto_lichaamslengte = int(input('Wat is uw netto lichaamslengte in hele cm, dus exclusief uw kapsel? '))
 lichaamsgewicht=int(input('Wat is uw lichaamsgewicht in hele kg? '))
 certificaat= input ('heeft u de certificaat "Overleven met gevaarlijk personeel"? J/N ')
@@ -31,11 +32,23 @@ opruimerig=int(input('Hoe opruimerig schat u uzelf op schaal van 1 (niet) tot 5 
 vliegbevet=input('Bezit u een vliegbevet? J/N ')
 is_de_aarde_plat=input('Is volgens u de aarde plat? ')
 ruimte_nodig=int(input('Hoeveel ruimte heeft u nodig om u heen op schaal van 1 (niet) tot 5 (veel)? '))
+diploma_mbo_4= input('bent In bezit van een Diploma MBO-4 ondernemen? ')
+ondernemer= int(input('hoeveel jaar ervaring met ondernemen heeft u? ' ))
+werknemers_loondienst=int(input('hoeveel medewerkers heeft u in loondienst? '))
+brede_glimlach= input('heeft u een bredeere glimlach groter dan 10 cm? ')
+
+if geslacht == 'man': snor=input('heeft u een snor breder dan 10 cm? ')
+if geslacht == 'vrouw': als_vrouw_met_rood_haar= input('draagt u rood krullend haar langer dan 20 cm?')
 
 if naam == '': 
     bool_naam = False
 else:
-    bool_naam = True
+    bool_naam = True   
+if geslacht == 'man': 
+    snor=input('heeft u een snor breder dan 10 cm? ')
+
+if geslacht == 'vrouw': 
+    als_vrouw_met_rood_haar= input('draagt u rood krullend haar langer dan 20 cm?')
 
 if netto_lichaamslengte >= 150 and netto_lichaamslengte <= 220:
     netto_lichaamslengte=True
@@ -91,8 +104,27 @@ if ruimte_nodig >= 1 and ruimte_nodig <= 5:
     ruimte_nodig=True
 else:
     ruimte_nodig=False
+    
+if ondernemer >= 3:
+    ondernemer= True
+else:
+    ondernemer=False
+    
+if werknemers_loondienst >= 5:
+    werknemers_loondienst=True
+else:
+    werknemers_loondienst=False
+   
+if brede_glimlach in ['j', 'ja', 'J', 'JA', 'Y', 'YES']:
+    brede_glimlach=True
+else:
+    brede_glimlach=False
 
-if bool_naam and netto_lichaamslengte and lichaamsgewicht and certificaat and praktijkervaring_met_acrobatiek and praktijkervaring_met_dieren_dressuur and ervaring_met_jongleren and fysieke_sport and opruimerig and vliegbevet and is_de_aarde_plat and ruimte_nodig :
+if bool_naam and netto_lichaamslengte and lichaamsgewicht and certificaat and praktijkervaring_met_acrobatiek and praktijkervaring_met_dieren_dressuur and ervaring_met_jongleren and fysieke_sport and opruimerig and vliegbevet and is_de_aarde_plat and ruimte_nodig and diploma_mbo_4 and ondernemer and werknemers_loondienst and brede_glimlach and snor  or als_vrouw_met_rood_haar :
     print(f'beste, {naam} \n Proficiat! u komt in aanmerking voor een sollicitatie gesprek, stuur sel uw CV')
 else:
     print('u bent niet gecwalificeert voor een gesprek :(')
+    
+    
+    
+    
