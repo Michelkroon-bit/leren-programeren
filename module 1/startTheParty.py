@@ -1,10 +1,12 @@
 gastheer_naam = ''
 
-
-
 gastheer = input('is de gastheer aanwezig ')
 if gastheer == 'ja': 
-    gastheer_naam= input ('hoe heet de gastheer? ')     
+    gastheer_naam= input ('hoe heet de gastheer? ')    
+    if gastheer_naam == 'ose':
+        gastheer=False
+    else:
+        gastheer=True
     gastheer=True
 else:
     gastheer=False
@@ -23,6 +25,9 @@ else:
 
 chips = input('is er chips aanwezig? ')
 if chips == 'ja':
+    chips = True   
+else:
+    chips=False
     
 if gastheer and gasten and drank and chips == False:
     print('Start the Party')
@@ -37,3 +42,6 @@ elif gastheer_naam == 'michel':
 
 else:
     print('No Party')
+
+
+#

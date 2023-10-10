@@ -24,3 +24,6 @@ if start_spel == 'nee':
             print('cambert')
         if korst == 'nee':
             print("mazzarella")
+
+
+# feedback alle nee antwoorden kunnen ook veranderen in een elif of else

@@ -51,6 +51,10 @@ elif geslacht == 'vrouw':
     
 else:
     brede_glimlach = input('heeft u een brede brede_glimlach')
+    
+    
+netto_lichaamslengte = netto_lichaamslengte >= 150 and netto_lichaamslengte <= 220
+
 
 if netto_lichaamslengte >= 150 and netto_lichaamslengte <= 220:
     netto_lichaamslengte=True
