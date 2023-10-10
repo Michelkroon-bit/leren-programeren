@@ -14,3 +14,6 @@
 
 uitkomst2 = 36/4
 print(uitkomst2)
+
+
+c=a+b
