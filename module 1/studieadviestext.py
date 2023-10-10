@@ -6,7 +6,7 @@ antwoorden: 0 is 'altijd'; 1 is 'vaak'; 2 is 'regelmatig'; 3 is 'soms'; 4 is 'no
 Het is belangrijk om eerlijk te zijn. Op basis van jouw antwoorden krijg je advies. 
 '''
 OPTIES = "Kies 0: altijd; 1: vaak; 2: regelmatig; 3: soms; 4: nooit"
-AANTAL_WEKEN_VRAAG = input('Hoeveel weken ben je al bezig met de opleiding?')
+AANTAL_WEKEN_VRAAG = 'Hoeveel weken ben je al bezig met de opleiding?'
 COMPETENTIE_STELLING_1 = 'Ik voel stress of blokkades bij het maken van programmeeropdrachten.'
 COMPETENTIE_STELLING_2 = 'Ik stel programmeeropdrachten en -uitdagingen uit.'
 COMPETENTIE_STELLING_3 = 'Ik denk dat ik geen talent heb voor de opleiding.'
