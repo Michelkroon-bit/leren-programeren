@@ -5,7 +5,7 @@ nr1 = 3
 nr2 = 11
 nr3 = 37
 nr4 = 79
-
+#nested functions
 # example
 result1 = nr3 * 7
 result2 = multiply(nr3, 7)
@@ -32,7 +32,7 @@ result2 = substract(nr4 , divide(multiply(nr1, substract(nr4 , nr3)),add(nr2 , n
 test('expression-4', result1, result2)
 
 result1 = ((nr4 - (nr1 * (nr4 - nr3)) / (nr2 + nr3)) * 23) - 1
-result2 = divide(substract(nr4,(multiply(nr1,(substract(nr4 , nr3),add(nr2 ,nr3)))))) *23 -1
+result2 = substract(multiply(substract(nr4,divide(multiply(nr1,substract(nr4,nr3)),add(nr2,nr3))),23),1)
 test('expression-5', result1, result2)
 
 report()
