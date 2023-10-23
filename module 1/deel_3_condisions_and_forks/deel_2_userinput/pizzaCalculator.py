@@ -8,18 +8,10 @@ LARGE_PIZZA =  10.99
 
 #user_input
 print('Welkom bij onze bezorg service')
+pizzaS = int(input("hoeveel kleine pizza's wilt u bestellen "))
+pizzaM= int(input("hoeveel medium pizza's wilt u bestellen "))
+pizzaL= int(input("hoeveel large pizza's wilt u bestellen "))
 
-variable_true= True
-while variable_true:
-    try: 
-        pizzaS = int(input("hoeveel kleine pizza's wilt u bestellen "))
-
-        pizzaM= int(input("hoeveel medium pizza's wilt u bestellen "))
-        
-        pizzaL= int(input("hoeveel large pizza's wilt u bestellen "))
-        variable_true = False
-    except:
-        print('je moet wel een nummer invullen')
 #rekensom variable keer constanten
 PizzaS=pizzaS*KLEINE_PIZZA
 PizzaM=pizzaM*MEDIUM_PIZZA
@@ -51,3 +43,15 @@ print("*************************************************************************
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+print('gemaakt door michel kroon')

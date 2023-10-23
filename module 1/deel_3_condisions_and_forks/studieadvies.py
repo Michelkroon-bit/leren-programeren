@@ -26,12 +26,12 @@ print(COMPETENTIE_STELLING_5)
 print(OPTIES)
 antwoord_5 = int(input())
 
-if aantal_weken_vraag < 10:
+if aantal_weken_vraag >= 10:
     print(COMPETENTIE_STELLING_6)
     print(OPTIES)
     antwoord_6 = int(input())
 
-if aantal_weken_vraag < 10:
+if aantal_weken_vraag >= 10:
     print(COMPETENTIE_STELLING_7)
     print(OPTIES)
     antwoord_7 = int(input())
