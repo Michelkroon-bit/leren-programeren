@@ -17,8 +17,6 @@ print('+++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
 
 
-
-
 naam=input('wat is uw naam? ')
 geslacht=input(' bent u een man of vrouw? ')
 netto_lichaamslengte = int(input('Wat is uw netto lichaamslengte in hele cm, dus exclusief uw kapsel? '))
@@ -36,8 +34,7 @@ diploma_mbo_4= input('bent In bezit van een Diploma MBO-4 ondernemen? ')
 ondernemer= int(input('hoeveel jaar ervaring met ondernemen heeft u? ' ))
 werknemers_loondienst=int(input('hoeveel medewerkers heeft u in loondienst? '))
 
-# if geslacht == 'man': snor=input('heeft u een snor breder dan 10 cm? ')
-# if geslacht == 'vrouw': als_vrouw_met_rood_haar= input('draagt u rood krullend haar langer dan 20 cm?')
+
 
 if naam == '': 
     bool_naam = False
