@@ -1,7 +1,7 @@
 # example:
 nr1 = 3.0
 nr2 = 17.0
-nr3 = 0
+# nr3 = . 66
 
 def increment(nr1: float) -> float:
   return nr1 + 1

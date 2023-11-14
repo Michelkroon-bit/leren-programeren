@@ -1,8 +1,12 @@
 from test_lib import *
 from math import*
 from test_lib import test , report
+
+
 month_discount_brands = 'Vespa,Kymco,Yamama'
 MONTH_DISCOUNT_PERC = 10
+
+
 def calc_discount(price: float, brand: str, month_discount_brands: str) -> float:
     if brand in month_discount_brands:
         discount = price * MONTH_DISCOUNT_PERC /100
@@ -13,6 +17,11 @@ def calc_discount(price: float, brand: str, month_discount_brands: str) -> float
 expected = 10.00
 calculate = calc_discount (100 , 'Vespa' , month_discount_brands)
 test('value', expected , calculate)
+
+expected = 20.00
+calculate = calc_discount (200 , 'Yamama' , month_discount_brands)
+test('Yamama', expected , calculate)
+
 
 report()
 

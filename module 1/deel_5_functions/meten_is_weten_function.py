@@ -7,7 +7,7 @@ def getal_vergelijking(nr1:int , nr2:int)-> str:
     else:
         return('Beide getallen zijn even groot') 
 
-nr1 = 29
+nr1 = 20
 nr2 = 10
 expected = 'Maximum: 20 en minimum: 10'
 functionreturn = getal_vergelijking(nr1, nr2)
@@ -15,15 +15,23 @@ test('Nr1 groter', expected, functionreturn)
 
 
 nr1 = 10
-nr2 = 2
+nr2 = 20
 expected = 'Maximum: 20 en minimum: 10'
 functionreturn = getal_vergelijking(nr1, nr2)
 test('Nr2 groter', expected, functionreturn)
 
 nr1 = 20
-nr2 = 21
+nr2 = 20
 expected = 'Beide getallen zijn even groot'
 functionreturn = getal_vergelijking(nr1, nr2)
 test('Nr1 en Nr2 zijn gelijk', expected, functionreturn)
+
+
+
+nr1 = 15
+nr2 = 350
+expected = 'Maximum: 350 en minimum: 15'
+functionreturn = getal_vergelijking(nr1, nr2)
+test('extra test', expected, functionreturn)
 
 report()

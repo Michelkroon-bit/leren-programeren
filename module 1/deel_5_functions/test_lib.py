@@ -2,7 +2,7 @@ import sys,time
 import builtins
 import re
 from colorama import init
-from termcolor import colored
+# from termcolor import colored
 
 MAX_REPORT_STRING = 100
 

@@ -62,6 +62,13 @@ for x in antwoorden_lijst:
        count1 += 1
     if x == 2:
        count2 += 1
+       
+       
+       
+       
+       
+       
+       
     if x == 3:
        count3 += 1
     if x == 4:
@@ -81,7 +88,7 @@ if (gemiddelde <= 2) or (count0 + count1 >= counthelft):
     print('Je advies is zorgelijk')
 
 elif (gemiddelde == 3) or (count0 +count1 + count2 >= counthelft):
-    print(COMPETENTIE_ADVIES_TITEL)
+    print(COMPETENTIE_ADVIES_TWIJFELACHTIG)
     print('Je advies is twijfelachtig')
     
 
