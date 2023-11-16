@@ -170,8 +170,8 @@ def arrival_at_dungeon():
             clear()
             first_chambers()
         elif equip_candle in ["B","b"]:
-            print("You are killed by a unknown monster.")
-            clear
+            print("You are killed by a unknown entity.")
+            clear() 
             dead()
             
     elif entering_the_dungeon in ["B" , "b"]:
@@ -208,7 +208,8 @@ def first_chambers():
                 print("I should head back to the main chamber.")
                 sleep(2)
                 print("Im finaly back.")
-                    
+                clear()
+                first_chambers()
             elif text_on_tag in ["B" , "b"]:
                 print ("I wonder what it says but i will come back to it later.")
         elif key in["B" , "b"]:
@@ -234,16 +235,19 @@ def second_chamber():
             chest = input(">> ")
             if chest in ["A" , "a"]:
                 print("You tried to lockpick the chest but it failed you have to look for the key.")
+                second_chamber()
             elif chest in ["B","b"]:
                 global chestkey
                 if chestkey != False:
                     print("You opened the chest and found another key.")
+                    clear()
+                    third_chamber()
                     global doorKey
                     doorKey = True
                 else:
                     print("You don't have a key.")
                     print("I should return to the other chamber and look for the key.")
-                    print("Returning to chamber one.")
+                    print("Returning to chamber one...")
                     sleep(3)
                     clear()
                     first_chambers()                   
@@ -262,7 +266,6 @@ def second_chamber():
                     third_chamber()
                 elif continue_ in ["B" , "b"]:  
                     clear()
-                    first_chambers()
                     #global doorKey
                     #doorKey = True
             else:
@@ -271,14 +274,13 @@ def second_chamber():
                 return_or_continue = input(">> ")
                 if return_or_continue in ["A" , "a"]:
                     print ("You decide to go back to the main room.")
-                    clear
-                    first_chambers()     
                     clear()
+                    first_chambers()     
                 elif return_or_continue in ["B" , "b"]:
                     clear()
                     third_chamber() 
         return
-    
+     
     
 def third_chamber(): 
     print ("You see another closed door in the back of the prison what do you do \n(A) check it out. \n(B) dont check it." )
@@ -293,14 +295,14 @@ def third_chamber():
             third_chamber()
             
         elif weird_noice in ["B" ,"b"]:
-            print("You did not look closer and decided to walk away and look further until you stepped on a stone like button that generates a clicking sound two hidden doors open which one do you choose? \n(A) left. \n(B) right. \n(C) keep looking.")
+            print("You did not look closer and decided to walk away and look further until you stepped on a stone like pressure plate that generates a clicking sound two hidden doors open which one do you choose? \n(A) left. \n(B) right. \n(C) keep looking.")
             hidden_door = input(">> ")
-            if hidden_door in ["A" , "a"]:
-                
+            if hidden_door in ["A" , "a"]: 
                 print("You wander into the left room that has a 2 big monsters inside of it you tried to sneak out of the room but you trip and fall which wakes up the monsters but you bearly got to escape you will need to check the other chambers (B) left chamber. (C) keep looking for other secrets.")
                 escaped = input(">> ")
                 if escaped in ["B" ," b "]:
                     print("You wander into the right room thats filled with traps you try to back off but the door closes and you are traped there's no way out.")
+                    clear()
                     dead()
                     third_chamber()
                     
@@ -327,6 +329,7 @@ def fourth_and_final_chamber():
         if tressure in ["A" , "a"]:
             print("You took to much gold wich weighted you down as the tressure room started to collaps you didn't have enough time to escape.")
             sleep(5)
+            clear()
             dead()
             fourth_and_final_chamber()
         elif tressure in ["B" ,"b"]: 
@@ -381,7 +384,7 @@ def the_end():
     
     
 # # # main script
-start()
+# start()
 
 # story()
 
@@ -405,6 +408,6 @@ start()
 
 # fourth_and_final_chamber()
 
-# the_Escape()
+the_Escape()
 
 the_end()
