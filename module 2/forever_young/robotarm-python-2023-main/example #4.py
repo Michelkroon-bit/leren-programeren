@@ -3,22 +3,35 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 4')
 
 # Jouw python instructies zet je vanaf hier:
-for x in range(5):
+for x in range(4):
     robotArm.grab()
-    for x in range (5):
+    for x in range (2):
         robotArm.moveRight()
     robotArm.drop()
-    for x in range (5):
+    for x in range (2):
         robotArm.moveLeft()
 
-for x in range(5):
-    for x in range(5):
-        robotArm.moveRight()
+# VOOR LAATSTE BLOK
+robotArm.grab()
+for x in range (2):
+    robotArm.moveRight()
+robotArm.drop()
+
+# WEER TERUG
+for x in range(4):
     robotArm.grab()
-    for x in range (4):
+    for x in range(1):
         robotArm.moveLeft()
     robotArm.drop()
+    for x in range(1):
+        robotArm.moveRight()
+
+# VOOR LAATSTE BLOK
+robotArm.grab()
+for x in range(1):
     robotArm.moveLeft()
+robotArm.drop()
+    
 
 
 
