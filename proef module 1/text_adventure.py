@@ -384,7 +384,7 @@ def the_end():
     
     
 # # # main script
-# start()
+start()
 
 # story()
 
@@ -408,6 +408,6 @@ def the_end():
 
 # fourth_and_final_chamber()
 
-the_Escape()
+# the_Escape()
 
 the_end()
