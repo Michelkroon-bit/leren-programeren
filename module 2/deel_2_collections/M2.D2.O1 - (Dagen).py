@@ -1,31 +1,45 @@
 #tuple 
 dagen = ("maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag" , "zaterdag" , "zondag")
-werkdagen = ("maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag")
-weekenddagen = ("zaterdag" , "zondag")    
-reversedweekenddagen = ["zaterdag" , "zondag"]
-reversedwerkdagen = ["maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag"]
+# werkdagen = ("maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag")
+# weekenddagen = ("zaterdag" , "zondag")    
+# reversedweekenddagen = ["zaterdag" , "zondag"]
+# reversedwerkdagen = ["maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag"]
 
 
-for x in dagen:
-    print (x)
-print("")      
+weekdagen = dagen[0:7]
+print(f"de weekdagen zijn:{weekdagen}")
 
-
-
-for x in werkdagen:
-    print(f"de werkdagen zijn {werkdagen}")    
-print("")    
-
-
-for x in weekenddagen:
-    print(f"de weekenddagen zijn {weekenddagen}")
 print("")
 
+werkdagen = dagen[0 : 5]
+print(f"de werkdagen zijn:{werkdagen}")
 
-reversedweekenddagen.reverse()
-print(f"omgekeerde lijst{reversedweekenddagen}")
 print("")
 
+weekenddagen = dagen[5 : 7]
+print(f"de weekend dagen zijn :{weekenddagen}")
 
-reversedwerkdagen.reverse()
-print(f"omgekeerde lijst{reversedwerkdagen}")
+print("")
+
+weekenddagenreversed=list(dagen[5:7])
+weekenddagenreversed.reverse()
+print(f"de weekenddagen achterstevoren zijn :{weekenddagenreversed}")
+
+print("")
+
+werkdagenreversed=list(dagen[0:5])
+werkdagenreversed.reverse()
+print(f"de werkdagen achterstevoren zijn :{werkdagenreversed}")
+
+
+
+
+
+
+# weekenddagenreversed = dagen[-2:][::-1]
+# print(f"de weekenddagen achterstevoren zijn :{weekenddagenreversed}")
+
+# print("")
+
+# werkdagenreversed = dagen[:5][::-1]
+# print(f"de werkenddagen achterstevoren zijn :{werkdagenreversed}")
