@@ -1,6 +1,9 @@
-count = 31M2.D3.O1 - Blastoff 
+from time import sleep
+
+count = 31 
 while True:
     count  = count - 1
+    sleep(1)
     print (count)
     
     if count == 1:

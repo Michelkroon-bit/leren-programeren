@@ -18,3 +18,4 @@ print(lijstjes)
 #GEBRUIK VOORBEELDEN!!!
 
 #meer gebruik maken van voorbeelden!! 
+
