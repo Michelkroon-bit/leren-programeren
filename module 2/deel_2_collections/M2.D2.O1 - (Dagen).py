@@ -6,9 +6,22 @@ dagen = ("maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag" , "zaterda
 # reversedwerkdagen = ["maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag"]
 
 
-weekdagen = dagen[0:7]
-print(f"de weekdagen zijn:{weekdagen}")
 
+for index in range(7):
+    print(dagen[index])
+# print(f"de weekdagen zijn:{weekdagen}")
+print("")
+for index in range (5,7):
+    print(dagen[index])
+print("")
+for index in range (4 , -1 , -1):
+    print(dagen[index])
+print("")
+for dag in dagen:
+    print(dag)
+    
+
+    
 print("")
 
 werkdagen = dagen[0 : 5]

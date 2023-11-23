@@ -4,9 +4,9 @@ random_text = input("vul hier een zin in: ")
 print("")
 # text_split = random_text.split(" ")
 
-vertaling = {}
-vertaling["schild"] = "batminton" 
-vertaling["grot"] = "boom"
+vertaling = {"schild" : "batminton" ,"grot": "boom"}
+# vertaling["schild"] = "batminton" 
+# vertaling["grot"] = "boom"
 vertaling["Draganthor"] = "vis" 
 vertaling["schubben"] = "aap" 
 vertaling["vlammenzee"] = "porch 911" 

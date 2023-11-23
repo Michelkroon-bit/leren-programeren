@@ -1,8 +1,8 @@
 aantal_lijstjes=int(input("hoeveel lijstjes wilt u hebben: "))
 lijstjes=[]
-for x in range (1, aantal_lijstjes+1):
-    lengte_lijstjes=int(input(f"hoe lang moet het lijstje {x} zijn?: "))
-    lijstjes.append(list(range(x, lengte_lijstjes+1, x)))
+for lijst in range (1, aantal_lijstjes+1):
+    lengte_lijstjes=int(input(f"hoe lang moet het lijstje {lijst} zijn?: "))
+    lijstjes.append(list(range(lijst , lijst * lengte_lijstjes+1, lijst)))
 print(lijstjes)
     
 
@@ -13,5 +13,8 @@ print(lijstjes)
 
 # Vervolgens toont het programma een aantal lijstjes met de gekozen lengte, waarbij de eerste bij 1 begint en stappen van 1 neemt, de tweede bij 2 begint en stappen van 2 neemt, de derde bij 3 begint en stappen van 3 neemt, enz, enz …
 
-#lijstje van lijstjes maken 
+#lengte wordt bedoeld als in als je 4 invuld dat je print 4 cijfers lang moet zijn.
 
+#GEBRUIK VOORBEELDEN!!!
+
+#meer gebruik maken van voorbeelden!! 
