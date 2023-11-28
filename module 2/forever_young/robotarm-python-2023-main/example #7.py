@@ -11,7 +11,6 @@ stapeltjes = 0
 while stapeltjes < 5:
     blokje = 0
     while blokje < 6:
-        
         robotArm.grab()
         robotArm.moveLeft()
         robotArm.drop()
