@@ -3,19 +3,20 @@ from RobotArm import RobotArm
 robotArm = RobotArm('exercise 4')
 
 # Jouw python instructies zet je vanaf hier:
-for x in range(4):
+for x in range(5):
     robotArm.grab()
     for y in range (2):
         robotArm.moveRight()
     robotArm.drop()
-    for z in range (2):
-        robotArm.moveLeft()
+    if x < 4:
+    	for z in range (2):
+            robotArm.moveLeft()
 
-# VOOR LAATSTE BLOK
-robotArm.grab()
-for x in range (2):
-    robotArm.moveRight()
-robotArm.drop()
+# # VOOR LAATSTE BLOK
+# robotArm.grab()
+# for x in range (2):
+#     robotArm.moveRight()
+# robotArm.drop()
 
 # WEER TERUG
 for x in range(4):
