@@ -1,11 +1,22 @@
-print("Wat wilt u kopen \n(A)dropveter \n(B)lolly \n(C)snoeppapier ")
-kopen = input("")
+import os
+from time import sleep
+import random 
 
-if kopen == ("A" , "a"):
-    print("u heeft de dropveter gekozen")
-elif kopen == ("B" , "b"):
-    print("u heeft de lolly gekozen")
-elif kopen == ("C" , "c"):
-    print("u heeft het snoeppapier gekozen")
-else:
-    print("u heeft niks gekocht")
+def complementen_generator () ->str:
+        
+        COMPLIMENTEN = ("je bent een topper", "je doet het goed", "je bent geweldig")
+        random_compliment = random.choice(COMPLIMENTEN)
+        return random_compliment
+    
+naam = input("wat is uw naam: ") 
+
+print("generating.")
+sleep(1) 
+print("generating..")
+sleep(1)
+print("generating...")
+sleep(1)
+print(complementen_generator() , naam)
+
+# localscoping = een locale variable die je alleen in een functie kan gebruiken 
+# globalscoping = een variable die je overal in je file mag gebruiken
