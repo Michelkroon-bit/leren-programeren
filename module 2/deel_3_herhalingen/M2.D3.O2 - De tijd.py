@@ -1,6 +1,6 @@
 tijd_am = 0 #om tijd de tellen
 tijd_pm = 0 #om tijd te tellen 
-while True:
+while True: #voorkeur geen while true 
     tijd_am = tijd_am + 1
     if tijd_am >= 1 and tijd_am <= 12:
         print (f"{tijd_am} am")
@@ -10,3 +10,5 @@ while True:
             print(f"{tijd_pm} pm")
             if tijd_pm <=24:
                 break
+            
+#verander while trues en break hoeft niet

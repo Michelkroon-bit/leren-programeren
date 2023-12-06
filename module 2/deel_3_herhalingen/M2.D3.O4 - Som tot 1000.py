@@ -6,3 +6,5 @@ while uitkomst <= 1000:
     uitkomst = uitkomst + optel
     print(uitkomst)
     optel += 1
+    
+#NOG NIET AF

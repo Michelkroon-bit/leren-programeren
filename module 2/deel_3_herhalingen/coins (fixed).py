@@ -75,7 +75,7 @@ if change > 0: # if statement that states that if change is greater then 0 it pr
 else:
   print('done')
 
-print(f"{coin500}coins of 500 used")
+print(f"{coin500}coins of 500 used")  
 print(f"{coin200}coins of 200 used") 
 print(f"{coin100}coins of 100 used") 
 print(f"{coin50}coins of 50 used") 
