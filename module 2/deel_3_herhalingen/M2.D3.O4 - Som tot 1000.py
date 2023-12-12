@@ -1,10 +1,10 @@
 begin = 50
+som=(f"{begin}")
 optel=begin+1
-uitkomst = begin + optel 
-print(uitkomst)
+uitkomst = begin
 while uitkomst <= 1000:
+    som = (f"{som}+{optel}")
     uitkomst = uitkomst + optel
-    print(uitkomst)
+    print(f"{som}={uitkomst}")
     optel += 1
-    
-#NOG NIET AF
+#AF
