@@ -6,7 +6,7 @@ print("Start Programma")
 
 while True:
     
-    voeg_boodschap_toe = input("Voeg een item toe ")
+    voeg_boodschap_toe = input("Voeg een item toe ").lower()
     
     if voeg_boodschap_toe != (""):
         
@@ -17,11 +17,15 @@ while True:
             boodschappen_lijst.update({voeg_boodschap_toe : hoeveelheid})
         else:
             for key in boodschappen_lijst:
+                # print(f"Debug: {x['boodschap']}")
                 if key.lower() == voeg_boodschap_toe.lower():
                     print(f"{key.lower()} is al toegevoegd en heeft hoveelheid: {boodschappen_lijst[key]} ")
                     uitkomst = (boodschappen_lijst[key] + hoeveelheid)
-                    boodschappen_lijst.update({key:uitkomst})      
+                    boodschappen_lijst.update({key:uitkomst})
+                    # dup = True
+    # if dup != True:          
     nog_een_item_toevoegen = input('Wilt u nog een item toevoegen? ')
+        # dup = False
     if nog_een_item_toevoegen == "nee":
 
         break
@@ -35,11 +39,10 @@ print('---------------------')
         
 #verbetering
 
-#1 dictionairy gebruiken
-#code vereenvoudigen
-#per item dat je wilt kopen 1 element 
-#als het item al in de dict staat dan voegt hij alleen de hoeveelheid toe
-#als het item er niet in staat wordt hij gewoon toegevoegd
+#
+#
+#
+#
 #
 #
 #
