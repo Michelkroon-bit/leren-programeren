@@ -29,6 +29,7 @@ else:
     naam = input("wat is je naam ")
     if naam in VIP_LIST:
         vip = True
+    
     #bandje blauw
     if vip and age21:
         bandje_kleur = 'blauw'
