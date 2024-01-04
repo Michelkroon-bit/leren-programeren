@@ -1,16 +1,77 @@
 import random
-ronde = 0
+ronde = 1
 punt = 0
-
 print("start programma")
-random_getal=random.randint(1,1000)
-print(random_getal)
-raden = int(input("probeer het getal te raden "))
-if raden == random_getal:
-    print("goedzo je hebt het geraden")
-    punt +=1 
-    ronde+=1
-    if ronde == 20:
-        print("einde programma")
-        print(punt)
+while ronde < 21:
+    print(f"Start ronde: {ronde}")
+    print("Raad een getal tussen 1 en 1000")
+    random_getal = random.randint(1,1000)
+    print(random_getal)
+    for x in range(10):
+        raden = int(input("vul hier een getal in: "))
+        if random_getal != raden:
+            print("Fout probeer opnieuw")
+            verschil = abs(random_getal-raden)
+            # print(verschil)#for debugging
+            if verschil >20 and verschil <=50:
+                print("je bent warm")
+            elif verschil <=20:
+                print("je bent heel warm")
+            pogingen = 9 - x
+            if pogingen == 0:
+                print(f"helaas u heeft geen pogingen meer over het getal was {random_getal}")
+            else:
+                print(f"u heeft nog {pogingen} poging(en) over" ) 
+        else:
+            print("Goed geraden!!!")
+            punt+=1
+            print(f"{punt} punt(en)")
+            break        
+    # nog een ronde?    
+    nog_een_ronde = input("Wilt u nog een ronde spelen? " )
+    if ronde == 20 or nog_een_ronde == "nee":
+        print(f"{punt} punten goed gedaan!!")
+        print("Einde programma")
+        exit()
+    else:
+        ronde += 1       
+        
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # if random_getal == raden:
+    #     print("Goed geraden")
+    #     punt +=1
+    #     print(punt)
+    #     nog_een_ronde= input("wil je nog een ronde spelen? ")
+    #     if ronde == 20 or nog_een_ronde == "nee":
+    #         print(f"{punt} punten gescoord goed gedaan!!")
+    #         print("einde programma")
+    #         break
+    #     if ronde != 20 or nog_een_ronde == "ja":
+    #         ronde +=1
+            

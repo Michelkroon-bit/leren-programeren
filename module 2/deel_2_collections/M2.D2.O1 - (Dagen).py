@@ -1,11 +1,5 @@
 #tuple 
 dagen = ("maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag" , "zaterdag" , "zondag")
-# werkdagen = ("maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag")
-# weekenddagen = ("zaterdag" , "zondag")    
-# reversedweekenddagen = ["zaterdag" , "zondag"]
-# reversedwerkdagen = ["maandag" , "dinsdag" , "woensdag" , "donderdag" , "vrijdag"]
-
-
 
 for index in range(7):
     print(dagen[index])
