@@ -18,7 +18,3 @@ for x in range(1 , 8):
     print(f"kaart {x} {kaart}  ")
 print("")
 print(f"deck ({len(deck_kaarten)} kaarten) {deck_kaarten}")
-
-        
-
-

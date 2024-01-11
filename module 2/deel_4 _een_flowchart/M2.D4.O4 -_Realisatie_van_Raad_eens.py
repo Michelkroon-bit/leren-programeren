@@ -9,13 +9,17 @@ while ronde < 21:
     print(random_getal)
     for x in range(10):
         raden = int(input("vul hier een getal in: "))
+        if raden > random_getal:
+            print('lager')
+        elif raden < random_getal:
+            print("hoger")            
         if random_getal != raden:
             print("Fout probeer opnieuw")
             verschil = abs(random_getal-raden)
             # print(verschil)#for debugging
-            if verschil >20 and verschil <=50:
+            if verschil > 20 and verschil <= 50:
                 print("je bent warm")
-            elif verschil <=20:
+            elif verschil <= 20:
                 print("je bent heel warm")
             pogingen = 9 - x
             if pogingen == 0:
