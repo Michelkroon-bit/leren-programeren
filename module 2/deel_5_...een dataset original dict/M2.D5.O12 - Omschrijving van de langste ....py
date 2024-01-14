@@ -2,21 +2,13 @@ from fruitmand import fruitmand
 
 #gestorteerde lengte van de naam
 sorted_list = sorted(fruitmand, key = lambda x: len(x["name"]) ,reverse=True)
-langste_naam = sorted_list[0]
+fruit_met_langste_naam = sorted_list[0]
 kleur_translated = ''
 
+kleuren = {'orange': 'oranje', 'yellow':'gele','green':'groene' , 'red':'rode', 'brown':'bruine'}
+
 #kleuren vertaling
-if langste_naam['color'] == 'orange':
-    kleur_translated = 'oranje'
-elif langste_naam['color'] == 'yellow':
-    kleur_translated = 'gele'
-elif langste_naam['color'] == 'green':
-    kleur_translated = 'groene'
-elif langste_naam['color'] == 'red':
-    kleur_translated = 'rode'
-elif langste_naam['color'] == 'brown':
-    kleur_translated = 'bruine'
 
 #eind output
-print(f'De "{langste_naam["name"]}" ({len(langste_naam["name"])} letters) heeft een {kleur_translated} kleur en heeft een gewicht van {langste_naam["weight"]/1000} kg.' )
+print(f'De "{fruit_met_langste_naam["name"]}" ({len(fruit_met_langste_naam["name"])} letters) heeft een {kleuren[fruit_met_langste_naam["color"]]} kleur en heeft een gewicht van {fruit_met_langste_naam["weight"]/1000} kg.' )
 

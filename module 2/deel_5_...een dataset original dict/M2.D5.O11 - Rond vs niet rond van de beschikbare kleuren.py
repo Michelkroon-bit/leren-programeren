@@ -14,13 +14,15 @@ while True:
     if kleur_kiezen not in unique_kleuren:
         print(f'De kleur {kleur_kiezen} zit er niet in de fruitmand')
     else:
-        for x in fruitmand: 
-            if x['color'] == kleur_kiezen:   
-                if x ['round']== True:
-                    count_rond +=1
-                else:
-                    count_not_rond +=1
-        break    
+        break 
+
+for x in fruitmand: 
+    if x['color'] == kleur_kiezen:   
+        if x ['round']== True:
+            count_rond +=1
+        else:
+            count_not_rond +=1
+           
 uitkomst_1 = count_rond - count_not_rond
 #meer rond
 if uitkomst_1 >0:
@@ -32,3 +34,4 @@ elif uitkomst_1 <0:
 #gelijk
 else:
     print(f'Er zijn {count_rond} ronde vruchten en {count_not_rond} niet ronde vruchten in de kleur {kleur_kiezen}')
+
