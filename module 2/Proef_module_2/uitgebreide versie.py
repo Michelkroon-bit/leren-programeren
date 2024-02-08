@@ -44,11 +44,16 @@ for naam in namen:
         if naam != laatste_lootje:
             if naam != random_lootje:
                 giver_reciever.update({naam : random_lootje})
+                lootjes.remove(random_lootje)
                 laatste_lootje = random_lootje
                 laatst_gekozen = naam
                 break
+            
+            
+            
         else:
             if random_lootje != laatst_gekozen:
+                if naam != random_lootje:
                     giver_reciever.update({naam : random_lootje})
                     lootjes.remove(random_lootje)
                     laatste_lootje = random_lootje
@@ -56,7 +61,7 @@ for naam in namen:
                     break
 
 while True:
-                  
+                
     print ('Welke naam wil je opvragen:')
     
     print("")
@@ -75,11 +80,7 @@ while True:
     
     print('druk op "ENTER" om nog een naam in te vullen of druk op "X" om te cancelen')
     verder_gaan =input(">> ")
-    if verder_gaan == "":
-        print("")
-        print(f"je heb {naam_1} al opgevraagd kies 1 van de andere namen")
-        
-        print("")
+    if verder_gaan == "":       
         print("")
     
     else:
