@@ -3,6 +3,8 @@ aantal_keer_vragen = 3
 lootjes = []
 namen = []
 gekozen_lootjes = []
+
+giver_reciever = {}
 print('start programma')
 
 while True:
@@ -41,31 +43,66 @@ for naam in namen:
         random_lootje = random.choice(lootjes)
         if naam != laatste_lootje:
             if naam != random_lootje:
-                gekozen_lootjes.append(f'{naam} heeft het lootje van {random_lootje}')
-                lootjes.remove(random_lootje)
+                giver_reciever.update({naam : random_lootje})
                 laatste_lootje = random_lootje
                 laatst_gekozen = naam
                 break
         else:
             if random_lootje != laatst_gekozen:
-                    gekozen_lootjes.append(f'{naam} heeft het lootje van {random_lootje}')
+                    giver_reciever.update({naam : random_lootje})
                     lootjes.remove(random_lootje)
                     laatste_lootje = random_lootje
                     laatst_gekozen = naam
                     break
-                            
-print('--------Getrokken lootjes--------')
-print("")
-for x in gekozen_lootjes:
+
+while True:
+                  
+    print ('Welke naam wil je opvragen:')
     
-    print(x.capitalize())
     print("")
-gekozen_lootjes = []
-print('')
-print('---------------------------------')
-
-
-
+    
+    for naam in giver_reciever:
+        print(naam)
+    print("")
+    naam_opvragen = input(">> ") 
+    for key in giver_reciever.keys(): 
+        if naam_opvragen == key:
+            naam_1 = giver_reciever[key]
+            print(f'je heb het lootje van {key} gekozen')
+            print(f'{key.capitalize()} heeft het lootje van {naam_1.capitalize()}' )
+            
+    print("")
+    
+    print('druk op "ENTER" om nog een naam in te vullen of druk op "X" om te cancelen')
+    verder_gaan =input(">> ")
+    if verder_gaan == "":
+        print("")
+        print(f"je heb {naam_1} al opgevraagd kies 1 van de andere namen")
+        
+        print("")
+        print("")
+    
+    else:
+        verder_gaan == "x"
+        exit()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 # for naam in namen:
 #     while True:
 #         random_lootje = random.choice(lootjes)
