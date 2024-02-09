@@ -19,27 +19,43 @@ while True:
     for naam in namen:
         while True:
             random_lootje = random.choice(lootjes)
-            if naam != laatste_lootje:
-                if naam != random_lootje:
-                    giver_reciever.update({naam : random_lootje})
-                    lootjes.remove(random_lootje)
-                    laatste_lootje = random_lootje
-                    laatst_gekozen = naam
-                    break
-                
-                
-                
+            giver_reciever.update({naam : random_lootje})
+            if naam == random_lootje:
+                giver_reciever.clear()
             else:
-                if random_lootje != laatst_gekozen:
-                    if naam != random_lootje:
-                        giver_reciever.update({naam : random_lootje})
-                        lootjes.remove(random_lootje)
-                        laatste_lootje = random_lootje
-                        laatst_gekozen = naam
-                        break
-                
+                break
+            
 
-    for x, y in giver_reciever.items():
-        print(x, y)
+
+    while True:
+                    
+        print ('Welke naam wil je opvragen:')
         
-    input("Press enter to run again.")
+        print("")
+        
+        for naam in giver_reciever:
+            print(naam)
+        print("")
+        naam_opvragen = input(">> ") 
+        for key in giver_reciever.keys(): 
+            if naam_opvragen == key:
+                naam_1 = giver_reciever[key]
+                print(f'je heb het lootje van {key} gekozen')
+                print(f'{key.capitalize()} heeft het lootje van {naam_1.capitalize()}' )
+                
+        print("")
+        
+        print('druk op "ENTER" om nog een naam in te vullen of druk op "X" om te cancelen')
+        verder_gaan =input(">> ")
+        if verder_gaan == "":       
+            print("")
+        
+        else:
+            verder_gaan == "x"
+            exit()
+                    
+
+        for x, y in giver_reciever.items():
+            print(x, y)
+            
+        input("Press enter to run again.")
