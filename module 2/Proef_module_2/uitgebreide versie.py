@@ -34,31 +34,26 @@ while True:
         if nog_een_persoon_invullen == "nee":
             break
 print('')     
+
 # random.shuffle(namen)
 # random.shuffle(lootjes)
 laatst_gekozen = ""
 laatste_lootje = ""
-for naam in namen:
-    while True:
+while True:
+    for naam in namen: # loop door je lijst me ingevulde namen heen 
         random_lootje = random.choice(lootjes)
-        if naam != laatste_lootje:
-            if naam != random_lootje:
-                giver_reciever.update({naam : random_lootje})
-                lootjes.remove(random_lootje)
-                laatste_lootje = random_lootje
-                laatst_gekozen = naam
-                break
-            
-            
-            
-        else:
-            if random_lootje != laatst_gekozen:
-                if naam != random_lootje:
-                    giver_reciever.update({naam : random_lootje})
-                    lootjes.remove(random_lootje)
-                    laatste_lootje = random_lootje
-                    laatst_gekozen = naam
-                    break
+        giver_reciever.update({naam : random_lootje})
+        # print(giver_reciever)
+        lootjes.remove(random_lootje)
+    #check poging
+    for x , y in giver_reciever.items():
+        if x == y:
+            lootjes = namen.copy()
+            # giver_reciever.clear()
+            # print(giver_reciever)
+            break    
+    if x != y:
+        break
 
 while True:
                 

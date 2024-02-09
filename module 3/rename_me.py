@@ -22,7 +22,7 @@ def ruimte_hamsterwiel(planetair_taartje:str) -> float:
     bizarro_matrix = blork / len(wobbelwobbel)
     return bizarro_matrix
 
-def spaghetti_spaceship(infinity_pizza:int, parallelle_tosti:int=10) -> None:
+def spaghetti_spaceship(infinity_pizza:int, parallelle_tosti:int=10) -> None: 
     for zwabber_krakeling in range(1, parallelle_tosti+1):
         laser_sandwich = zwabber_krakeling * infinity_pizza
         print(f'{zwabber_krakeling} x {infinity_pizza} = {laser_sandwich}')
