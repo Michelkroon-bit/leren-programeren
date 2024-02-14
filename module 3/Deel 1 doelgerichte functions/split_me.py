@@ -11,6 +11,8 @@ def analyseer_getallenlijst(getallen:list, controlegetal1:int, controlegetal2:in
     if not str(controlegetal2).isnumeric():
         return {"Tweede controlle getal incorrect.":controlegetal2}
 
+    #je hoeft geen extra functies te schrijven voor uitrekenprogramma's met ingebouwde functies zoals len,min,max,sum
+
     # Gemiddelde berekenen
     aantal = len(getallen)
 
@@ -18,8 +20,10 @@ def analyseer_getallenlijst(getallen:list, controlegetal1:int, controlegetal2:in
     som = sum(getallen)
 
     # Gemiddelde berekenen
-    gemiddelde = som / aantal
-
+    def gemiddelde_berekenen(som , aantal):
+        gemiddelde = som / aantal
+        return gemiddelde
+    
     # Het grootste getal in de lijst
     grootste_getal = max(getallen)
     
@@ -27,16 +31,25 @@ def analyseer_getallenlijst(getallen:list, controlegetal1:int, controlegetal2:in
     kleinste_getal = min(getallen)
     
     # Het eerste getal in de lijst
-    eerste_getal = getallen[0]
+    def eerste_getal_in_lijst ():
+        eerste_getal = getallen[0]
+        return eerste_getal
     
     # Het kleinste getal gedeeld door het eerste controle getal
-    delen1 = kleinste_getal / controlegetal1
-
+    def delen_door_eerste_controle_getal(kleinste_getal , controlegetal1):
+        delen1 = kleinste_getal / controlegetal1
+        return delen1
+    
     # Het grootste getal gedeeld door het tweede controle getal
-    delen2 = grootste_getal / controlegetal2
-
+    def gedeeld_door_tweede_controle_getal():
+        delen2 = grootste_getal / controlegetal2
+        return delen2
+    
     # alle unieke getallen
-    unieke_getallen = list(set(getallen))
+    def unieke_getallen_selecteren():
+        unieke_getallen = list(set(getallen))
+        return unieke_getallen
+
 
     # Aantal unieke elementen in de lijst
     aantal_unieke_elementen = len(unieke_getallen)

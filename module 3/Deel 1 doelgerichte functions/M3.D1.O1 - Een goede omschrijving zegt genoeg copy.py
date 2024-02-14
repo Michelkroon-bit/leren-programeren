@@ -37,14 +37,14 @@ def lengte_tellen_van_zin(gemaakte_zin:str) -> float:
 
     aantal_characters = count / len(zin_splitsen)
     return aantal_characters
-aantal_characters = lengte_tellen_van_zin('hallo test python is een programeertaal')
+aantal_characters = lengte_tellen_van_zin('hallo test python is een programeertaal')#telt het aantal woorden
 print(aantal_characters)
 
 
-def keersom(ingevulde_nummer:int, nummer:int=10) -> None:
+def tafels(ingevulde_nummer:int, nummer:int=10) -> None:
     for x in range(1, nummer+1):
         uitkomst = x * ingevulde_nummer
         print(f'{x} x {ingevulde_nummer} = {uitkomst}')
         
-uitgerekend = keersom(9, 10)
+uitgerekend = tafels(9, 10)# maakt de tafels van een ingevuld getal
 print(uitgerekend)
