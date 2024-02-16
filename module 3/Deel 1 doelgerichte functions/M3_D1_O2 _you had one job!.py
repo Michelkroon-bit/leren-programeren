@@ -48,9 +48,9 @@ def kleinste_getal_in_lijst(getallen):
     return kleinste_getal
 
 # Aantal unieke elementen in de lijst
-def aantal_elementen (unieke_getallen):
-    aantal_unieke_elementen = len(unieke_getallen)
-    return aantal_unieke_elementen
+def aantal_elementen (getallen):
+    aantal_elementen = len(getallen)
+    return aantal_elementen
 
  # Verschil tussen aantal unieke elementen en eerste controle getal
 def verschil_tussen_elementen(aantal_unieke_elementen , controlegetal1):
@@ -63,8 +63,8 @@ def elementen_in_gesorteerde_lijst(getallen):
     return gesorteerde_lijst
 
 # Sorteer de lijst van unieke getallen
-def gesorteerde_lijst (unieke_getallen):
-    gesorteerde_lijst_uniek = sorted(unieke_getallen)
+def gesorteerde_lijst (getallen):
+    gesorteerde_lijst_uniek = sorted(getallen)
     return gesorteerde_lijst_uniek
 
  # Tel het aantal keren dat elk uniek element voorkomt in de lijst
@@ -76,9 +76,9 @@ def elementen_tellen(getallen):
     return telling_elementen
 
     # Getallen die deelbaar zijn door het eerste controlle getal
-def getallen_deelbaar_door_acht (unieke_getallen):
+def getallen_deelbaar_door_acht (getallen):
     deelbaar1 = []
-    for getal in unieke_getallen:
+    for getal in getallen:
         if getal % controlegetal1 == 0:
             deelbaar1.append(getal)
     deelbaar1 = sorted(deelbaar1)
