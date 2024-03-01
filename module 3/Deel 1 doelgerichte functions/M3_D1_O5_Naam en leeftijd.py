@@ -4,9 +4,8 @@ def naam_en_leeftijd_invullen() -> dict:
     age = int(input('vul uw leeftijd in: '))
     return {'naam':name , 'leeftijd' :age}
     
-namen = naam_en_leeftijd_invullen()
+ingevulde_naam = naam_en_leeftijd_invullen()
 
-print(f'{str(namen["naam"])} is {namen["leeftijd"]} jaar oud')
+print(f'{str(ingevulde_naam["naam"])} is {ingevulde_naam["leeftijd"]} jaar oud')
 
 
-#je mag geen global variables gebruiken!!!! (staat niet in de opdracht had ik weer zo gezelgd moeten weten)
