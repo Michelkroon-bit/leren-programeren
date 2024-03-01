@@ -13,7 +13,7 @@ for x in range(5):
             robotArm.moveLeft()
 
 
-# WEER TERUG
+# WEER  
 for x in range(4):
     robotArm.grab()
     for a in range(1):
