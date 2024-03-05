@@ -37,7 +37,7 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = float(input(f'welk getal optellen bij {n1} \n'))
         uitkomst = addition(n1 , n2)
         print(f'{n1} + {n2} = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         return uitkomst
         
@@ -50,7 +50,7 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = float(input(f'welk getal aftrekken bij {n1} \n'))
         uitkomst = substraction(n1 , n2)
         print(f'{n1} - {n2} = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         return uitkomst
         
@@ -62,7 +62,7 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = float(input(f'welk getal vermenigvuldigen bij {n1} \n'))
         uitkomst = multiplication(n1 , n2)
         print(f'{n1} * {n2} = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         return uitkomst        
         
@@ -74,7 +74,7 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = float(input(f'welk getal delen bij {n1} \n'))
         uitkomst = division(n1 , n2)
         print(f'{n1} : {n2} = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         print(f'wat wil je met de uitkomst ({uitkomst}) doen?')
         return uitkomst
@@ -87,7 +87,7 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = 1
         uitkomst = n1 + n2
         print(f'{n1} + 1 = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         return uitkomst        
         
@@ -99,7 +99,7 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = 1
         uitkomst = n1 - n2 
         print(f'{n1} - 1 = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         return uitkomst
         
@@ -112,7 +112,7 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = 2
         uitkomst = n1 * n2
         print(f'{n1} x 2 = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         return uitkomst
         
@@ -125,13 +125,14 @@ def wat_wilt_u_doen(par_uitkomst):
         n2 = 2
         uitkomst = n1 / n2
         print(f'{n1} : 2 = {uitkomst}')
-        print('-----------------------------------------')
+        print('--------------------------')
         firstround = False
         return uitkomst
     
     
     elif choice == '':
         if firstround == False:
+            print('programma stopt')
             exit() 
     else:
         wat_wilt_u_doen()    
