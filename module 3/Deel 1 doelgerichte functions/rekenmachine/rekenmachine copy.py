@@ -12,7 +12,7 @@ def wat_wilt_u_doen(par_uitkomst):
     
     if par_uitkomst == '':
         firstround = True
-        print('wat wilt u doen')
+        print('Wat wilt u doen: ')
         for x in lijst_met_opties:
             print (x)
         print('\n')
@@ -20,7 +20,7 @@ def wat_wilt_u_doen(par_uitkomst):
         choice = choice.upper()
     
     else:
-        print(f'wat wilt u met {par_uitkomst} doen')
+        print(f'Wat wilt u met {par_uitkomst} doen: ')
         n1 = par_uitkomst
         for x in lijst_met_opties:
             print (x)
