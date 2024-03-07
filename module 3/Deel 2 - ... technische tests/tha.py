@@ -1,7 +1,7 @@
 from functions import *
 from data import *
 
-totalCost = 0
+totalCost = 0   
 chapterNr = 1
 
 print_title('A Treasure Hunt Adventure Story')

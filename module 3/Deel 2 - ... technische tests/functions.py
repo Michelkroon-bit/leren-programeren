@@ -10,10 +10,13 @@ def copper2silver(amount:int) -> float:
     
 
 def silver2gold(amount:int) -> float:
-    pass
+    if amount == 10:
+        gold = 1
+    return gold
 
-def copper2gold(amount:int) -> float:
-    pass
+def copper2gold(gold:int) -> float:
+    if gold == 5:
+        
 
 def platinum2gold(amount:int) -> float:
     pass

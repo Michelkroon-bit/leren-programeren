@@ -1,9 +1,6 @@
-def guess(who , what , where):
-    print(what)
+while True:
+    try:
+        leeftijd = int(input('Wat is je leeftijd? '))
+    except ValueError:
+        print('je moet wel een nummer invullen')
     
-    who = 'jeroen'
-    what = 'fietsen'
-    where = 'buiten'
-    
-    
-guess(where , who , what)   

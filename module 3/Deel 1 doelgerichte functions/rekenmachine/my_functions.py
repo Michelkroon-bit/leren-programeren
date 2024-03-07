@@ -33,3 +33,5 @@ def second_multiplication (uitkomst , nr2):
 def second_division (uitkomst , nr2):
     uitkomst_1 = uitkomst / nr2
     return uitkomst_1
+
+

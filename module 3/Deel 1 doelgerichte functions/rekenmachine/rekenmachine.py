@@ -54,6 +54,7 @@ def wat_wilt_u_doen(parameter_uitkomst):
         firstround = False
         return uitkomst
         
+        
         #C
     elif choice == 'C':
         print('getallen vermenigvuldigen')
@@ -65,6 +66,7 @@ def wat_wilt_u_doen(parameter_uitkomst):
         print('--------------------------')
         firstround = False
         return uitkomst        
+        
         
         #D
     elif choice == 'D':
@@ -79,6 +81,7 @@ def wat_wilt_u_doen(parameter_uitkomst):
         print(f'wat wil je met de uitkomst ({uitkomst}) doen?')
         return uitkomst
         
+        
         #E
     elif choice == 'E':
         print('getallen ophogen')
@@ -90,6 +93,7 @@ def wat_wilt_u_doen(parameter_uitkomst):
         print('--------------------------')
         firstround = False
         return uitkomst        
+        
         
         #F
     elif choice == 'F':
