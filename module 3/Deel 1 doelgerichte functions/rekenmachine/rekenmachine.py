@@ -6,11 +6,11 @@ from time import sleep
 lijst_met_opties = ['A) getallen optellen', 'B) getallen aftrekken', 'C) getallen vermenigvuldigen', 'D) getallen delen', 'E) getal ophogen', 'F) getal verlagen','G) getal verdubbelen', 'H) getal halveren?']
 
 
-def wat_wilt_u_doen(par_uitkomst):
+def wat_wilt_u_doen(parameter_uitkomst):
     
     global firstround
     
-    if par_uitkomst == '':
+    if parameter_uitkomst == '':
         firstround = True
         print('Wat wilt u doen: ')
         for x in lijst_met_opties:
@@ -20,8 +20,8 @@ def wat_wilt_u_doen(par_uitkomst):
         choice = choice.upper()
     
     else:
-        print(f'Wat wilt u met {par_uitkomst} doen: ')
-        n1 = par_uitkomst
+        print(f'Wat wilt u met {parameter_uitkomst} doen: ')
+        n1 = parameter_uitkomst
         for x in lijst_met_opties:
             print (x)
         print('\n')

@@ -5,7 +5,9 @@ from data import JOURNEY_IN_DAYS
 ##################### O03 #####################
 
 def copper2silver(amount:int) -> float:
-    pass
+    if amount == 10:
+        
+    
 
 def silver2gold(amount:int) -> float:
     pass
