@@ -1,59 +1,87 @@
 import time
 from termcolor import colored
-from data import JOURNEY_IN_DAYS
-
+from data import PEOPLE_PER_HORSE , PEOPLE_PER_TENT ,JOURNEY_IN_DAYS , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_FOOD_HORSE_COPPER_PER_DAY , CURRENCY_CONVERT_COPPER_SILVER , CURRENCY_CONVERT_PLATINUM_GOLD , CURRENCY_CONVERT_SILVER_GOLD, COST_TENT_GOLD_PER_WEEK , COST_HORSE_SILVER_PER_DAY
+from data import friends
+from math import ceil
 ##################### O03 #####################
 
 def copper2silver(amount:int) -> float:
-    if amount == 10:
-        
+    return amount / CURRENCY_CONVERT_COPPER_SILVER
     
-
+    
 def silver2gold(amount:int) -> float:
-    if amount == 10:
-        gold = 1
-    return gold
+    return amount / CURRENCY_CONVERT_SILVER_GOLD
 
 def copper2gold(gold:int) -> float:
-    if gold == 5:
-        
-
+    amound_silver = copper2silver(gold)
+    amound_gold = silver2gold(amound_silver)
+    return amound_gold
+    
+    
+    
 def platinum2gold(amount:int) -> float:
-    pass
+    return amount * CURRENCY_CONVERT_PLATINUM_GOLD
+
 
 def getPersonCashInGold(personCash:dict) -> float:
-    pass
-
+    copper = personCash['copper']
+    platinum = personCash['platinum']
+    gold = personCash['gold']
+    silver = personCash['silver']  
+    return platinum2gold(platinum) + copper2gold(copper) + silver2gold(silver) + gold
+    
+    
+        
 ##################### O05 #####################
 
 def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
-    pass
+    totale_kosten_paart = copper2gold(COST_FOOD_HORSE_COPPER_PER_DAY)
+    totale_kosten_persoon = copper2gold(COST_FOOD_HUMAN_COPPER_PER_DAY) 
+    totaal = round(totale_kosten_paart * JOURNEY_IN_DAYS * horses + totale_kosten_persoon * JOURNEY_IN_DAYS * people , 2)
+    return totaal
 
 ##################### O06 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
-
+    resultaten = []
+    
+    for x in list:
+        try:
+            if x[key] == value:
+                resultaten.append(x)
+        except:
+            pass
+    return resultaten
+    
 def getAdventuringPeople(people:list) -> list:
-    pass
+    result = getFromListByKeyIs(people , 'adventuring' , True)
+    
+    return result
 
 def getShareWithFriends(friends:list) -> list:
-    pass
+    result = getFromListByKeyIs(friends , 'shareWith' , True)
+    
+    return result
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    result = getFromListByKeyIs('adventuring' ,'shareWith', getAdventuringPeople(friends ))
+    return result
 
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    result =  people / PEOPLE_PER_HORSE
+    result = ceil(result) 
+    return result
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    result = people / PEOPLE_PER_TENT
+    result = ceil(result)
+    return result
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
-
+    uitkomst = getNumberOfHorsesNeeded(horses) / silver2gold(COST_HORSE_SILVER_PER_DAY) * JOURNEY_IN_DAYS
+    return uitkomst
 ##################### O08 #####################
 
 def getItemsAsText(items:list) -> str:
