@@ -47,6 +47,5 @@ test('getTotalRentalCost - test 2',expected, result)
 expected = 99.0
 result = getTotalRentalCost(3,11)
 test('getTotalRentalCost - test 3',expected, result)
-
 if __name__ == "__main__":
     report()
