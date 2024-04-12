@@ -16,7 +16,7 @@ testarg_items_test1 = [{
     'unit' : 'x',
     'price' : {
         'amount' : 4,
-        'soort' : 'copper'
+        'type' : 'copper'
     }
 }]
 
@@ -34,7 +34,7 @@ testarg_items_test2 = [{
     'unit' : '',
     'price' : {
         'amount' : 7,
-        'soort' : 'platinum'
+        'type' : 'platinum'
     }
 }]
 expected = '1 Diamand'
@@ -52,7 +52,7 @@ testarg_items_test3 = [{
     'unit' : 'l',
     'price' : {
         'amount' : 1,
-        'soort' : 'gold'
+        'type' : 'gold'
     }
 },{
     'name' : 'Een pannekoek',
@@ -60,7 +60,7 @@ testarg_items_test3 = [{
     'unit' : 'x',
     'price' : {
         'amount' : 0.5,
-        'soort' : 'gold'
+        'type' : 'gold'
     }
 }]
 expected = '5l Appelsap & 10x Een pannekoek'
@@ -77,7 +77,7 @@ testarg_items_test4 = [{
     'unit' : ' ronde',
     'price' : {
         'amount' : 2,
-        'soort' : 'gold'
+        'type' : 'gold'
     }
 },{
     'name' : 'Patat',
@@ -85,7 +85,7 @@ testarg_items_test4 = [{
     'unit' : 'x',
     'price' : {
         'amount' : 4,
-        'soort' : 'silver'
+        'type' : 'silver'
     }
 },{
     'name' : 'Cola',
@@ -93,7 +93,7 @@ testarg_items_test4 = [{
     'unit' : 'l',
     'price' : {
         'amount' : 5,
-        'soort' : 'copper'
+        'type' : 'copper'
     }
 },{
     'name' : 'Sinas',
@@ -101,7 +101,7 @@ testarg_items_test4 = [{
     'unit' : 'dl',
     'price' : {
         'amount' : 12,
-        'soort' : 'copper'
+        'type' : 'copper'
     }
 }]
 expected = '1 ronde Voetbal, 11x Patat, 1l Cola & 5dl Sinas'

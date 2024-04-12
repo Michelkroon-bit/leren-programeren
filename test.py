@@ -1,21 +1,37 @@
-testarg_investors_test1_2_4 = [{
+testarg_investors_test6 = [{
     'profitReturn' : 5,
     'adventuring' : True
+},{
+    'profitReturn' : 5,
+    'adventuring' : False
+},{
+    'profitReturn' : 9,
+    'adventuring' : False
+},{
+    'profitReturn' : 1,
+    'adventuring' : False
 }]
-testarg_gearList_test1_8 = [{
-    'amount' : 3,
-    'price' : {
-        'amount' : 1,
-        'type' : 'gold'
-    }
-}]
+
 
 
 def getInterestingInvestors(investors:list) -> list:
+    geintreseerde_investors = []
+    for x in investors:
+        if x['profitReturn'] <= 10:
+            geintreseerde_investors.append(x)
+    return geintreseerde_investors
+
+
+def getAdventuringInvestors(investors:list) -> list:
+    geintreseerde_investors = []
     for x in investors:
         if x['adventuring'] == True:
-            profits = x['profitReturn']
-            print(profits)
-    return profits
+            geintreseerde_investors.append(x)
+    return geintreseerde_investors
 
-getInterestingInvestors(testarg_gearList_test1_8)
+
+
+abc = getInterestingInvestors(testarg_investors_test6)
+abcd = getAdventuringInvestors(testarg_investors_test6)
+for x in abcd:
+    print(x)

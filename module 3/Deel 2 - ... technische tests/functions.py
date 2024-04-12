@@ -1,6 +1,6 @@
 import time
 from termcolor import colored
-from data import PEOPLE_PER_HORSE , PEOPLE_PER_TENT ,JOURNEY_IN_DAYS , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_FOOD_HORSE_COPPER_PER_DAY , CURRENCY_CONVERT_COPPER_SILVER , CURRENCY_CONVERT_PLATINUM_GOLD , CURRENCY_CONVERT_SILVER_GOLD, COST_TENT_GOLD_PER_WEEK , COST_HORSE_SILVER_PER_DAY 
+from data import PEOPLE_PER_HORSE , PEOPLE_PER_TENT ,JOURNEY_IN_DAYS , COST_INN_HORSE_COPPER_PER_NIGHT , COST_INN_HUMAN_SILVER_PER_NIGHT , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_FOOD_HORSE_COPPER_PER_DAY , CURRENCY_CONVERT_COPPER_SILVER , CURRENCY_CONVERT_PLATINUM_GOLD , CURRENCY_CONVERT_SILVER_GOLD, COST_TENT_GOLD_PER_WEEK , COST_HORSE_SILVER_PER_DAY 
 from data import friends , adventurerGear
 from math import ceil
 
@@ -110,19 +110,19 @@ def getItemsValueInGold(items:list) -> float:
     for x in items:
         uitkomst_1 = x['amount'] * items[index]['price']['amount']
         
-        if items[index]['price']['soort'] == 'copper':
+        if items[index]['price']['type'] == 'copper':
             totale_uitkomst += float(copper2gold(uitkomst_1))
             
         
-        if items[index]['price']['soort'] == 'silver':
+        if items[index]['price']['type'] == 'silver':
             totale_uitkomst += float(silver2gold(uitkomst_1))
             
         
-        if items[index]['price']['soort'] == 'platinum':
+        if items[index]['price']['type'] == 'platinum':
             totale_uitkomst += float(platinum2gold(uitkomst_1))
             
         
-        if items[index]['price']['soort'] == 'gold':
+        if items[index]['price']['type'] == 'gold':
             totale_uitkomst += uitkomst_1 #float(x['amount'] * items[0]['price']['amount'])
         index +=1  
     return totale_uitkomst
@@ -145,28 +145,71 @@ def getCashInGoldFromPeople(people:list) -> float:
 
 ##################### O10 #####################
 
+
 def getInterestingInvestors(investors:list) -> list:
+    geintreseerde_investors = []
     for x in investors:
-        total_cut = x['profitReturn']
-        if total_cut <10:
-            
-    return 
+        if x['profitReturn'] <= 10:
+            geintreseerde_investors.append(x)
+    return geintreseerde_investors
+
 
 def getAdventuringInvestors(investors:list) -> list:
+    adventuring_investors = []
     for x in investors:
-        going_on_adenture = x['adventuring']
-    return going_on_adenture
+        if x['adventuring'] == True:
+            adventuring_investors.append(x)
+    return adventuring_investors
+
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    uitkomst = 0.0
+    abc = getInterestingInvestors(investors)
+    abcd = getAdventuringInvestors(abc)
+    for x in abcd:
+        index = 0
+        #berekening #1
+        koste_eten_paart = copper2gold(COST_FOOD_HORSE_COPPER_PER_DAY) * JOURNEY_IN_DAYS
+        koste_paart = silver2gold(COST_HORSE_SILVER_PER_DAY) * JOURNEY_IN_DAYS
+        koste_tent = ceil(JOURNEY_IN_DAYS / 7) * COST_TENT_GOLD_PER_WEEK
+        koste_eten = copper2gold(COST_FOOD_HUMAN_COPPER_PER_DAY) * JOURNEY_IN_DAYS
+        uitkomst += koste_tent + koste_eten + koste_paart + koste_eten_paart
+        
+        #berekening 2 
+        for y in gear:
+            uitkomst_1 = y['amount'] * gear[index]['price']['amount']
+            
+            if gear[index]['price']['type'] == 'copper':
+                uitkomst += float(copper2gold(uitkomst_1))
+                
+            
+            if gear[index]['price']['type'] == 'silver':
+                uitkomst += float(silver2gold(uitkomst_1))
+                
+            
+            if gear[index]['price']['type'] == 'platinum':
+                uitkomst += float(platinum2gold(uitkomst_1))
+                
+            
+            if gear[index]['price']['type'] == 'gold':
+                uitkomst += uitkomst_1 #float(x['amount'] * items[0]['price']['amount'])
+            index +=1      
+    return round(uitkomst , 2)
 
 ##################### O11 #####################
 
 def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
+    
     pass
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
-    pass
+    cost_horse_per_night = horses * COST_INN_HORSE_COPPER_PER_NIGHT
+    copper2gold(cost_horse_per_night)
+    cost_person_per_night= people * COST_INN_HUMAN_SILVER_PER_NIGHT
+    silver2gold(cost_person_per_night)
+    
+    
+    return float(cost_person_per_night + cost_horse_per_night) * nightsInInn
 
 ##################### O13 #####################
 
