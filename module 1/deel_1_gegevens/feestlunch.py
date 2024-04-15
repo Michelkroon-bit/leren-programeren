@@ -11,4 +11,4 @@ prijs_stokbroden_in_centen = stokbroden * PRIJS_STOKBROOD
 prijs_kortingsbonnen_in_centen_kortingsbonnen_in_centen = kortingsbonnen *PRIJS_KORTINGSBON
 uitkomst = croissantjes + stokbroden - kortingsbonnen
 
-print('De feestlunch kost je bij de bakker' ,uitkomst, ' voor de' ,croissantjes,' croissantjes en de ',stokbroden,' stokbroden als de ',kortingsbonnen,' kortingsbonnen nog geldig zijn!')
+print(f'De feestlunch kost je bij de bakker {uitkomst} euro voor de {croissantjes} croissantjes en de {stokbroden} stokbroden als de {kortingsbonnen} kortingsbonnen nog geldig zijn!')
